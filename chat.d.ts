@@ -1,3 +1,2 @@
-declare const router: import("express-serve-static-core").Router;
-export default router;
+export default function ChatPage(): import("react").JSX.Element;
 //# sourceMappingURL=chat.d.ts.map

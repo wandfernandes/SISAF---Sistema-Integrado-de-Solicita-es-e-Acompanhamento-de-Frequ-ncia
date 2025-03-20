@@ -1,3 +1,2 @@
-declare const router: import("express-serve-static-core").Router;
-export default router;
+export default function LicensesPage(): import("react").JSX.Element;
 //# sourceMappingURL=licenses.d.ts.map

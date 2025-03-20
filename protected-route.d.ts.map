@@ -1,0 +1,1 @@
+{"version":3,"file":"protected-route.d.ts","sourceRoot":"","sources":["../../../../client/src/lib/protected-route.tsx"],"names":[],"mappings":"AAIA,wBAAgB,cAAc,CAAC,EAC7B,IAAI,EACJ,SAAS,EAAE,SAAS,GACrB,EAAE;IACD,IAAI,EAAE,MAAM,CAAC;IACb,SAAS,EAAE,MAAM,KAAK,CAAC,GAAG,CAAC,OAAO,CAAC;CACpC,+BA0BA"}
