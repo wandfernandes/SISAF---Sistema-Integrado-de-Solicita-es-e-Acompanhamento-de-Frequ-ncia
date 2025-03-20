@@ -1,5 +1,5 @@
 modules = ["nodejs-20", "web", "postgresql-16"]
-run = "npm run dev"
+run = "node server-bootstrap.js"
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [nix]
@@ -8,23 +8,15 @@ channel = "stable-24_05"
 [deployment]
 deploymentTarget = "cloudrun"
 build = ["sh", "-c", "npm run build"]
-run = ["sh", "-c", "node server-start.cjs"]
+run = ["sh", "-c", "npm start"]
 
 [[ports]]
 localPort = 3000
 externalPort = 5000
 
 [[ports]]
-localPort = 4000
-externalPort = 3001
-
-[[ports]]
 localPort = 5000
 externalPort = 3000
-
-[[ports]]
-localPort = 8080
-externalPort = 80
 
 [workflows]
 runButton = "Start application"
@@ -50,13 +42,5 @@ task = "packager.installForAll"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "node server-start.cjs"
+args = "node server-bootstrap.js"
 waitForPort = 5000
-
-[[workflows.workflow]]
-name = "Start Server"
-author = 39964987
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "npm run start"

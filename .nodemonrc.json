@@ -1,0 +1,18 @@
+{
+  "verbose": true,
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "watch": [
+    "server/**/*.ts",
+    "shared/**/*.ts"
+  ],
+  "execMap": {
+    "ts": "node temp-server.js"
+  },
+  "env": {
+    "NODE_ENV": "development",
+    "TS_NODE_PROJECT": "tsconfig.node.json"
+  }
+}
